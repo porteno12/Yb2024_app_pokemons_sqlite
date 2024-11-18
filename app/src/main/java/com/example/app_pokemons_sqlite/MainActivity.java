@@ -1,5 +1,6 @@
 package com.example.app_pokemons_sqlite;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,11 +21,17 @@ public class MainActivity extends AppCompatActivity {
 
     private int playerHealth = 100;  // Initial health for the player
     private int cpuHealth = 100;     // Initial health for the CPU
-
+    SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        db = openOrCreateDatabase(Utils_Sqlite.DATABASE_NAME, MODE_PRIVATE, null);
+        Utils_Sqlite.createTables(db);
+        //Pokemon tmpPk = new Pokemon("bubsour", 1000, "grass");
+        //tmpPk.setPokemon_id();
+        //Utils_Sqlite.insert2PokemonTbl(db, tmpPk);
+        Utils_Sqlite.deletePokemonTbl(db, 2);
 
         // init the binding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
