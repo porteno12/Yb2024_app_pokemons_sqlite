@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddPokemon_Screen">
+
+    <!-- ImageView for Pokemon Image -->
+    <ImageView
+        android:id="@+id/imageViewPokemon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ct1"/>
+
+    <!-- EditText for Pokemon Name -->
+    <EditText
+        android:id="@+id/editTextPokemonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_pokemon_name"
+        android:inputType="textPersonName"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextPokemonPower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_pokemon_power"
+        android:inputType="number"
+        android:layout_marginTop="8dp" />
+
+    <!-- EditText for Pokemon Type -->
+    <EditText
+        android:id="@+id/editTextPokemonType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_pokemon_type"
+        android:inputType="text"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button to Add Pokemon -->
+    <Button
+        android:id="@+id/buttonAddPokemon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add_pokemon"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">App_Pokemons_Sqlite</string>
+    <string name="hint_pokemon_power">pokemon power</string>
+    <string name="hint_pokemon_type">pokemon type</string>
+    <string name="button_add_pokemon">add pokemon</string>
+    <string name="hint_pokemon_name">pokemon_name</string>
+</resources>

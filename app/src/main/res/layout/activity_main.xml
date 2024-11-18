@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Battle Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Player Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Health Bar for Player -->
+            <ProgressBar
+                android:id="@+id/playerHealthBar"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:progress="100"
+                android:max="100"
+                android:progressTint="@android:color/holo_red_dark"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_gravity="center"/>
+
+            <!-- Player Pokémon Image -->
+            <ImageView
+                android:id="@+id/playerPokemon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/pika_fight"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"/>
+
+
+
+            <!-- Damage Text for Player -->
+            <TextView
+                android:id="@+id/playerDamageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-200"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_light"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+        <!-- Spacer to separate the two Pokémon -->
+        <View
+            android:layout_width="32dp"
+            android:layout_height="match_parent" />
+        <!-- Strike Effect -->
+        <ImageView
+            android:id="@+id/strikeEffect"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/strike_effect"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <!-- CPU Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Health Bar for CPU -->
+            <ProgressBar
+                android:id="@+id/cpuHealthBar"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:progress="100"
+                android:max="100"
+                android:progressTint="@android:color/holo_red_dark"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_gravity="center"/>
+
+            <!-- CPU Pokémon Image -->
+            <ImageView
+                android:id="@+id/cpuPokemon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/charizard"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Strike Effect for CPU -->
+
+            <!-- Damage Text for CPU -->
+            <TextView
+                android:id="@+id/cpuDamageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-200"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_light"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Attack Button -->
+    <Button
+        android:id="@+id/btnBattle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attack"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
