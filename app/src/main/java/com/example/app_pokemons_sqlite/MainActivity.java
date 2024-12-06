@@ -22,16 +22,32 @@ public class MainActivity extends AppCompatActivity {
     private int playerHealth = 100;  // Initial health for the player
     private int cpuHealth = 100;     // Initial health for the CPU
     SQLiteDatabase db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         db = openOrCreateDatabase(Utils_Sqlite.DATABASE_NAME, MODE_PRIVATE, null);
         Utils_Sqlite.createTables(db);
-        //Pokemon tmpPk = new Pokemon("bubsour", 1000, "grass");
+
+        Pokemon pk1 = new Pokemon("bulbsour", 1000, "grass");
+        Pokemon pk2 = new Pokemon("picachu", 2000, "electric");
+        Pokemon pk3 = new Pokemon("psyduck", 2500, "psych");
+        Utils_Sqlite.insert2PokemonTbl(db, pk1);
+        Utils_Sqlite.insert2PokemonTbl(db, pk2);
+        Utils_Sqlite.insert2PokemonTbl(db, pk3);
+
+        Trainer t1 = new Trainer("ash kutchem", 1);
+        Trainer t2 = new Trainer("miyau", 3);
+        Utils_Sqlite.insert2TrainerTbl(db, t1);
+        Utils_Sqlite.insert2TrainerTbl(db, t2);
+
+        //update pokemon
+        pk2.setName("pikachu");
+        //Utils_Sqlite.updatePokemon(db, pk2);
         //tmpPk.setPokemon_id();
         //Utils_Sqlite.insert2PokemonTbl(db, tmpPk);
-        Utils_Sqlite.deletePokemonTbl(db, 2);
+        //Utils_Sqlite.deletePokemonTbl(db, 3);
 
         // init the binding
         binding = ActivityMainBinding.inflate(getLayoutInflater());

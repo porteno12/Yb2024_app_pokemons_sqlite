@@ -10,7 +10,11 @@ public class Trainer {
         this.name = name;
         this.level = level;
     }
-
+    public Trainer(String name, int level) {
+        this.trainer_id = 0;
+        this.name = name;
+        this.level = level;
+    }
     public int getTrainer_id() {
         return trainer_id;
     }

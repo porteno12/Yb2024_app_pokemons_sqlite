@@ -13,13 +13,13 @@
         android:theme="@style/Theme.App_Pokemons_Sqlite"
         tools:targetApi="31">
         <activity
-            android:name=".ShowAll_Pokemons"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".AddPokemon_Screen"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ShowAll_Pokemons"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
